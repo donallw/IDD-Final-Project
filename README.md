@@ -15,7 +15,7 @@ The main idea is to create an automated pill dispenser that selects the correct 
  <img width="687" alt="image" src="https://user-images.githubusercontent.com/42963791/142444470-8ad23ffa-b95d-400b-9054-e3c9cdff414e.png">
 
 
-### What You'll Need
+### What We'll Need
 - Raspberry Pi
 - Servo controllers
 - Camera
