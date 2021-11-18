@@ -25,3 +25,4 @@ The main idea is to create an automated pill dispenser that selects the correct 
 - LCD Screen
 - Cardboard
 
+### Possible Designs
