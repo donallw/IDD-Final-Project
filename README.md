@@ -9,6 +9,10 @@ The main idea is to create an automated pill dispenser that selects the correct 
 **Storyboard**
 
  <img width="622" alt="Screen Shot 2021-11-18 at 10 03 35 AM" src="https://user-images.githubusercontent.com/52221419/142440765-d76006d7-2d3b-45fb-95ab-c82bff230cdb.png">
+ 
+ **Verplank Diagram**
+ 
+ <img width="687" alt="image" src="https://user-images.githubusercontent.com/42963791/142444470-8ad23ffa-b95d-400b-9054-e3c9cdff414e.png">
 
 
 ### What You'll Need
