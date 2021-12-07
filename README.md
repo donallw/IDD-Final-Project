@@ -101,6 +101,6 @@ https://youtu.be/7yktiRSzXLk
 <img width="403" alt="image" src="https://user-images.githubusercontent.com/42963791/145081448-0f34b8e6-0287-4ca3-88df-5997cd00cc36.png">
 
 
-##### Results
+### Results
 
 The turnstile performed well in delivering the pills but the prototype had severe limitations. It. can only hold one pill in each tunel at a time. This was our next design challenge.
