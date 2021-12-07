@@ -28,6 +28,24 @@ The main idea is to create an automated pill dispenser that selects the correct 
 ### Prototype Designs
 <img width="769" alt="Screen Shot 2021-11-18 at 10 54 53 AM" src="https://user-images.githubusercontent.com/52221419/142449922-8a8b0da3-6caa-4a21-8521-e7057e7b264a.png">
 
+## User feedback
+
+Below are the commets we received on canvas:
+
+##### Sara Wang
+
+This is a great idea. Since some medications are taken not on a daily basis, but rather multiple times a day, an extension could be to add a way to customize the daily schedule. You could also consider pairing the device with a notification system/tracker that reminds the user to take their medication at the times/days they need to and logs when they have done it.
+
+##### Alexandra Walburgis Dongfangchen Bremers
+
+It is a nice idea and well documented. I like that you thought about the context of use and the user, but also about how the system will be packaged. I wonder what you wanted to 3D print? From the description of the device it seems more suitable to use cardboard prototyping or existing packaging materials (e.g. don't print a box!). Additional considerations that could make the project stronger could be the inclusion of a security feature, or considerations around the fact that eyesight characteristics might make it hard for the user to read from a small display.
+
+##### Bella Baidak
+
+Very useful idea!! I often forget to take my daily pill/vitamins and having a device like this would surely help me a lot. 
+A concern I have for this project are the risks you pointed out. If someone gets the wrong amount of pills or the face detection messes up and gives the pills to the wrong person. This are very severe risks and can lead to horrible side affects. It would be beneficial to incorporate some risk prevention into our design or some protocols. What are some ways you can think of that could prevent these risks? Two ideas off the bat I have are: having a weight sensor that detects the weight of pills dispensed and if the wrong weight (too many pills are dispensed) then the user is informed.  Another idea is that if the CV model is lets say less than 95 percent (some threshold you choose) sure that they have detected them correct face, then have the user type in a password (there is a key pad piece that would work nicely for this). 
+Overall I think your group will be able to execute your project as planned, it seems very doable to me and I am excited to see it! I did a sort of similar project for one of my labs and I used the servo motor with cardboard attached to dispense the pills, feel free to check it out on my github for inspiration. I cant paste a link here but my github user name is sketh444 and its under the interactive-lab-hub, under lab 5
+
 ## Cardboard Prototyping
 
 We decided that we needed to design the pill release mechanism first, before we considered involving facial recognition and user interaction. We built a cardboard prototype to test this behaviour.
