@@ -46,6 +46,18 @@ Very useful idea!! I often forget to take my daily pill/vitamins and having a de
 A concern I have for this project are the risks you pointed out. If someone gets the wrong amount of pills or the face detection messes up and gives the pills to the wrong person. This are very severe risks and can lead to horrible side affects. It would be beneficial to incorporate some risk prevention into our design or some protocols. What are some ways you can think of that could prevent these risks? Two ideas off the bat I have are: having a weight sensor that detects the weight of pills dispensed and if the wrong weight (too many pills are dispensed) then the user is informed.  Another idea is that if the CV model is lets say less than 95 percent (some threshold you choose) sure that they have detected them correct face, then have the user type in a password (there is a key pad piece that would work nicely for this). 
 Overall I think your group will be able to execute your project as planned, it seems very doable to me and I am excited to see it! I did a sort of similar project for one of my labs and I used the servo motor with cardboard attached to dispense the pills, feel free to check it out on my github for inspiration. I cant paste a link here but my github user name is sketh444 and its under the interactive-lab-hub, under lab 5
 
+### Feedback summary
+
+We were very grateful for the feedback we received, it was thorough and detailed. The main higlights and action points are listed below.
+
+- Sara pointed out an interesting way to improve out product by allowing users to cutomize their schedule. We really like this idea nd plan to desing a method to interact with the settings of the device; how may pills to release of what kind, who owns which pills, how often to release them a day, etc. We plan to implement a simple gui to take care of this that will be remotely connected to the device.
+
+- Sara also suggested we included some notification system for the users. This would be a very nice feature for our product and make sure users do not have to go into their bathroom to remember to take their pills. We plan to include this feature by using sound and light otifications and if all goes well it would be useful to be able to sed otifications to user's personal devices; e.g. smart phones.
+
+- We will follow Alexandra's suggestion and not do any 3D printing unless we have properly tested it with cardboard first.
+
+- Both Alexandra and Bella discussed security issues of the product. 
+
 ## Cardboard Prototyping
 
 We decided that we needed to design the pill release mechanism first, before we considered involving facial recognition and user interaction. We built a cardboard prototype to test this behaviour.
