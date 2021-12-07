@@ -13,6 +13,14 @@ The main idea is to create an automated pill dispenser that selects the correct 
  **Verplank Diagram**
  
  <img width="687" alt="image" src="https://user-images.githubusercontent.com/42963791/142444470-8ad23ffa-b95d-400b-9054-e3c9cdff414e.png">
+ 
+### Risks & Contingencies
+- Dispensing too many or the wrong pills
+- Dispenser getting stuck (should have a failsafe or easy way to manually get the pills out)
+- Duplicate dispensing - the dispenser should only dispense pills once per day (or as
+many times as necessary, but never more)
+- Dispenser doesn't detect the correct face and releases pills that belong to another
+individual
 
 
 ### What We'll Need
@@ -56,7 +64,17 @@ We were very grateful for the feedback we received, it was thorough and detailed
 
 - We will follow Alexandra's suggestion and not do any 3D printing unless we have properly tested it with cardboard first.
 
-- Both Alexandra and Bella discussed security issues of the product. 
+- Both Alexandra and Bella discussed security issues of the product. We had listed this as a risk earlier as well and it was helpful to get a confirmation from users that this was a big concern. We acknowledge that the face-recognitionn can someties produce errors ad hence we like the idea of some confirmation feature. We are planning to implement a voice confirmation feature so that the device doesn't release ay pills unless the user confirms it is him via voice input. We also like the weight scale idea to make sure that the correct pills were released. When reading the feedback we also had the idea of solving that problem in a similar manner as we did in Lab 5 where we use object detection to check if the right amount of pills were released.
+
+Overall, we appreciate the feedback we got and have creatred the following action items for our product:
+
+- Include a GUI to interact with the settings of the device
+
+- Implement a notification system
+
+- Have users confirm their identidy before pills are released
+
+- Include a confirmation check to make sure the device released the correct amount of pills
 
 ## Cardboard Prototyping
 
