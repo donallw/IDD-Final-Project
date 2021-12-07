@@ -34,14 +34,14 @@ for servo in servos:
 while True:
     try:
         if button.last_click_ms < 1000:
-            for servo in servos:
+            for idx, servo in enumerate(servos):
                 # Set the servo to 180 degree position
+                print(idx)
                 servo.angle = 180
-                time.sleep(2)
-                # Set the servo to 0 degree position
+                time.sleep(0.5)
                 servo.angle = 0
-                time.sleep(2)
-        
+                time.sleep(0.5)
+            time.sleep(1)
     except KeyboardInterrupt:
         for servo in servos:
             # Once interrupted, set the servo back to 0 degree position
