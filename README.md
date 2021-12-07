@@ -84,6 +84,7 @@ We decided that we needed to design the pill release mechanism first, before we 
 
 <img width="548" alt="image" src="https://user-images.githubusercontent.com/42963791/145081162-ac70446e-851a-471e-b630-e3598986d483.png">
 
+<img width="552" alt="image" src="https://user-images.githubusercontent.com/42963791/145081560-8a7764e1-8dd7-40b9-9ef2-1fc6730d461a.png">
 
 After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. The prototype is demonstrated in the video below.
 
@@ -94,6 +95,11 @@ https://youtu.be/GEepd2mpEjM
 As mentioned above we implemented a turnstile mechanism with cardboard and the servos to release pills. The video below shows how the prototype uses this mechanis to release the pills when the button is pressed.
 
 https://youtu.be/7yktiRSzXLk
+
+###### The turnstile
+
+<img width="403" alt="image" src="https://user-images.githubusercontent.com/42963791/145081448-0f34b8e6-0287-4ca3-88df-5997cd00cc36.png">
+
 
 ##### Results
 
