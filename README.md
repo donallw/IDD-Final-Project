@@ -13,6 +13,14 @@ The main idea is to create an automated pill dispenser that selects the correct 
  **Verplank Diagram**
  
  <img width="687" alt="image" src="https://user-images.githubusercontent.com/42963791/142444470-8ad23ffa-b95d-400b-9054-e3c9cdff414e.png">
+ 
+### Risks & Contingencies
+- Dispensing too many or the wrong pills
+- Dispenser getting stuck (should have a failsafe or easy way to manually get the pills out)
+- Duplicate dispensing - the dispenser should only dispense pills once per day (or as
+many times as necessary, but never more)
+- Dispenser doesn't detect the correct face and releases pills that belong to another
+individual
 
 
 ### What We'll Need
@@ -27,3 +35,72 @@ The main idea is to create an automated pill dispenser that selects the correct 
 
 ### Prototype Designs
 <img width="769" alt="Screen Shot 2021-11-18 at 10 54 53 AM" src="https://user-images.githubusercontent.com/52221419/142449922-8a8b0da3-6caa-4a21-8521-e7057e7b264a.png">
+
+## User feedback
+
+Below are the commets we received on canvas:
+
+##### Sara Wang
+
+This is a great idea. Since some medications are taken not on a daily basis, but rather multiple times a day, an extension could be to add a way to customize the daily schedule. You could also consider pairing the device with a notification system/tracker that reminds the user to take their medication at the times/days they need to and logs when they have done it.
+
+##### Alexandra Walburgis Dongfangchen Bremers
+
+It is a nice idea and well documented. I like that you thought about the context of use and the user, but also about how the system will be packaged. I wonder what you wanted to 3D print? From the description of the device it seems more suitable to use cardboard prototyping or existing packaging materials (e.g. don't print a box!). Additional considerations that could make the project stronger could be the inclusion of a security feature, or considerations around the fact that eyesight characteristics might make it hard for the user to read from a small display.
+
+##### Bella Baidak
+
+Very useful idea!! I often forget to take my daily pill/vitamins and having a device like this would surely help me a lot. 
+A concern I have for this project are the risks you pointed out. If someone gets the wrong amount of pills or the face detection messes up and gives the pills to the wrong person. This are very severe risks and can lead to horrible side affects. It would be beneficial to incorporate some risk prevention into our design or some protocols. What are some ways you can think of that could prevent these risks? Two ideas off the bat I have are: having a weight sensor that detects the weight of pills dispensed and if the wrong weight (too many pills are dispensed) then the user is informed.  Another idea is that if the CV model is lets say less than 95 percent (some threshold you choose) sure that they have detected them correct face, then have the user type in a password (there is a key pad piece that would work nicely for this). 
+Overall I think your group will be able to execute your project as planned, it seems very doable to me and I am excited to see it! I did a sort of similar project for one of my labs and I used the servo motor with cardboard attached to dispense the pills, feel free to check it out on my github for inspiration. I cant paste a link here but my github user name is sketh444 and its under the interactive-lab-hub, under lab 5
+
+### Feedback summary
+
+We were very grateful for the feedback we received, it was thorough and detailed. The main higlights and action points are listed below.
+
+- Sara pointed out an interesting way to improve out product by allowing users to cutomize their schedule. We really like this idea nd plan to desing a method to interact with the settings of the device; how may pills to release of what kind, who owns which pills, how often to release them a day, etc. We plan to implement a simple gui to take care of this that will be remotely connected to the device.
+
+- Sara also suggested we included some notification system for the users. This would be a very nice feature for our product and make sure users do not have to go into their bathroom to remember to take their pills. We plan to include this feature by using sound and light otifications and if all goes well it would be useful to be able to sed otifications to user's personal devices; e.g. smart phones.
+
+- We will follow Alexandra's suggestion and not do any 3D printing unless we have properly tested it with cardboard first.
+
+- Both Alexandra and Bella discussed security issues of the product. We had listed this as a risk earlier as well and it was helpful to get a confirmation from users that this was a big concern. We acknowledge that the face-recognitionn can someties produce errors ad hence we like the idea of some confirmation feature. We are planning to implement a voice confirmation feature so that the device doesn't release ay pills unless the user confirms it is him via voice input. We also like the weight scale idea to make sure that the correct pills were released. When reading the feedback we also had the idea of solving that problem in a similar manner as we did in Lab 5 where we use object detection to check if the right amount of pills were released.
+
+Overall, we appreciate the feedback we got and have creatred the following action items for our product:
+
+- Include a GUI to interact with the settings of the device
+
+- Implement a notification system
+
+- Have users confirm their identidy before pills are released
+
+- Include a confirmation check to make sure the device released the correct amount of pills
+
+## Cardboard Prototyping
+
+We decided that we needed to design the pill release mechanism first, before we considered involving facial recognition and user interaction. We built a cardboard prototype to test this behaviour. A simple button is used to control the pill dispenser.
+
+###  Design 1
+
+<img width="548" alt="image" src="https://user-images.githubusercontent.com/42963791/145081162-ac70446e-851a-471e-b630-e3598986d483.png">
+
+<img width="552" alt="image" src="https://user-images.githubusercontent.com/42963791/145081560-8a7764e1-8dd7-40b9-9ef2-1fc6730d461a.png">
+
+After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. The prototype is demonstrated in the video below.
+
+https://youtu.be/GEepd2mpEjM
+
+##### Releasing pills
+
+As mentioned above we implemented a turnstile mechanism with cardboard and the servos to release pills. The video below shows how the prototype uses this mechanis to release the pills when the button is pressed.
+
+https://youtu.be/7yktiRSzXLk
+
+###### The turnstile
+
+<img width="403" alt="image" src="https://user-images.githubusercontent.com/42963791/145081448-0f34b8e6-0287-4ca3-88df-5997cd00cc36.png">
+
+
+### Results
+
+The turnstile performed well in delivering the pills but the prototype had severe limitations. It. can only hold one pill in each tunel at a time. This was our next design challenge.
