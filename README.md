@@ -82,6 +82,9 @@ We decided that we needed to design the pill release mechanism first, before we 
 
 ###  Design 1
 
+<img width="548" alt="image" src="https://user-images.githubusercontent.com/42963791/145081162-ac70446e-851a-471e-b630-e3598986d483.png">
+
+
 After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. The prototype is demonstrated in the video below.
 
 https://youtu.be/GEepd2mpEjM
