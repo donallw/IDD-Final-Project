@@ -30,6 +30,8 @@ The main idea is to create an automated pill dispenser that selects the correct 
 
 ## Cardboard Prototyping
 
+We decided that we needed to design the pill release mechanism first, before we considered involving facial recognition and user interaction. We built a cardboard prototype to test this behaviour.
+
 ###  Design 1
 
 After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. the prototype is demonstrated in the video below.
@@ -41,3 +43,5 @@ https://youtu.be/GEepd2mpEjM
 As mentioned above we implemented a turnstile mechanism with cardboard and the servos to release pills. The video below shows how the prototype uses this mechanis to release the pills when the button is pressed.
 
 https://youtu.be/7yktiRSzXLk
+
+The turnstile performed well in delivering the pills but the prototype had severe limitations. It. can only hold one pill in each tunel at a time. This was our next design challenge.
