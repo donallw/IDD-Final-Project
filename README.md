@@ -32,4 +32,12 @@ The main idea is to create an automated pill dispenser that selects the correct 
 
 ###  Design 1
 
+After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. the prototype is demonstrated in the video below.
+
 https://youtu.be/GEepd2mpEjM
+
+##### Releasing pills
+
+As mentioned above we implemented a turnstile mechanism with cardboard and the servos to release pills. The video below shows how the prototype uses this mechanis to release the pills when the button is pressed.
+
+https://youtu.be/7yktiRSzXLk
