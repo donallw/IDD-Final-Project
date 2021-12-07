@@ -78,11 +78,11 @@ Overall, we appreciate the feedback we got and have creatred the following actio
 
 ## Cardboard Prototyping
 
-We decided that we needed to design the pill release mechanism first, before we considered involving facial recognition and user interaction. We built a cardboard prototype to test this behaviour.
+We decided that we needed to design the pill release mechanism first, before we considered involving facial recognition and user interaction. We built a cardboard prototype to test this behaviour. A simple button is used to control the pill dispenser.
 
 ###  Design 1
 
-After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. the prototype is demonstrated in the video below.
+After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. The prototype is demonstrated in the video below.
 
 https://youtu.be/GEepd2mpEjM
 
