@@ -62,4 +62,6 @@ As mentioned above we implemented a turnstile mechanism with cardboard and the s
 
 https://youtu.be/7yktiRSzXLk
 
+##### Results
+
 The turnstile performed well in delivering the pills but the prototype had severe limitations. It. can only hold one pill in each tunel at a time. This was our next design challenge.
