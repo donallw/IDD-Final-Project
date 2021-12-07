@@ -27,3 +27,9 @@ The main idea is to create an automated pill dispenser that selects the correct 
 
 ### Prototype Designs
 <img width="769" alt="Screen Shot 2021-11-18 at 10 54 53 AM" src="https://user-images.githubusercontent.com/52221419/142449922-8a8b0da3-6caa-4a21-8521-e7057e7b264a.png">
+
+## Cardboard Prototyping
+
+###  Design 1
+
+https://youtu.be/GEepd2mpEjM
