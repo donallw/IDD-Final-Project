@@ -80,7 +80,7 @@ Overall, we appreciate the feedback we got and have creatred the following actio
 
 We decided that we needed to design the pill release mechanism first, before we considered involving facial recognition and user interaction. We built a cardboard prototype to test this behaviour. A simple button is used to control the pill dispenser.
 
-###  Design 1
+###  Design 1 - Turnstile
 
 <img width="548" alt="image" src="https://user-images.githubusercontent.com/42963791/145081162-ac70446e-851a-471e-b630-e3598986d483.png">
 
@@ -103,4 +103,28 @@ https://youtu.be/7yktiRSzXLk
 
 ### Results
 
-The turnstile performed well in delivering the pills but the prototype had severe limitations. It. can only hold one pill in each tunel at a time. This was our next design challenge.
+The turnstile performed well in delivering the pills but the prototype had severe limitations. It can only hold one pill in each tunel at a time, if more pills are put in the pipes, there is no mechanism to control how many are released. Someties a few go through and other times they get stuck and no pills go through. This was our next design challenge.
+
+### Desig 2 - Gear system
+
+To try to solve the problem of releasing one pill at a time we took a look at other design choices. We looked at designs of excisting pill dispensers, gun magazines, pet food feeders, etc. Those are all devices that allot a given amount of pills/bullets at a time. We observed that most of those devices have a compartment that has space for a given amount of pills and this compartment is then emptied to release pills before being automatically filled again.
+
+We designed a funnel out of cardboard that only allows one pill through it's narrowest part at a time, the funnel is connected to a tunnel that has space for one pill. In the tunnel there is a piece that is connected to a rack. The servo then spins the gear to move the piece back and forth, pushing the pill out and creating space for the next pill. The prototype was made with LEGO pieces and cardboard in the Maker Lab.
+
+<img width="550" alt="image" src="https://user-images.githubusercontent.com/42963791/145266548-fd9bf10c-4a84-457e-8941-3956fe22f721.png">
+
+<img width="552" alt="image" src="https://user-images.githubusercontent.com/42963791/145266588-6dd9e76b-ebdf-438a-a844-29e85ca20857.png">
+
+<img width="520" alt="image" src="https://user-images.githubusercontent.com/42963791/145266626-51eb8c32-ba70-44ee-922d-1a105e16763b.png">
+
+The gear rack
+
+<img width="548" alt="image" src="https://user-images.githubusercontent.com/42963791/145269560-ff2aae62-654b-4c74-89fe-876b7e4dcbf8.png">
+
+The prototype is explained in the video below.
+
+https://youtu.be/psr20-aDSgY
+
+### Results
+
+The prototype was successful in delivering one pill at a time. You can pour pills into the funnel and the device delivers one pill at a time. The main issues were related to the gear rack/saw and mounting units properly. The gear rack was made of cardboard (see above) and the device needed a little help to be held together. However, the prototype showed that this design can be successful in delivering the pills. The next step was to craft it more carefully and re-structure it to make the device more robust. We aim to 3d prinnt the gears to make sure the device not fall apart when used as the cardboard tended to do.
