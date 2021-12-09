@@ -17,6 +17,7 @@ def on_message(client, userdata, msg):
     if msg.topic == topic:
         val = msg.payload.decode('UTF-8')
         val = json.loads(val)
+        print(val)
         with open('data.txt', 'w') as outfile:
             json.dump(val, outfile)
         

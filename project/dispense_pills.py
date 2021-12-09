@@ -41,13 +41,18 @@ while True:
                 out_dict = {int(k): v for k, v in data.items()}
             print(out_dict)
             curr_day = datetime.today().weekday()
-            # for idx, servo in enumerate(servos):
-            #     # Set the servo to 180 degree position
-            #     print(idx)
-            #     servo.angle = 180
-            #     time.sleep(0.5)
-            #     servo.angle = 0
-            #     time.sleep(0.5)
+            desired = out_dict[curr_day]
+            print('desired: ',desired)
+            for idx, num_turns in enumerate(desired):
+                # Set the servo to 180 degree position
+                servo = servos[idx]
+                print('servo: ',idx,' num_turns:',num_turns)
+                for _ in range(num_turns):
+                    servo.angle = 180
+                    time.sleep(0.5)
+                    servo.angle = 0
+                    time.sleep(0.5)
+                time.sleep(0.5)
             time.sleep(1)
     except KeyboardInterrupt:
         for servo in servos:
