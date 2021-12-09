@@ -35,7 +35,9 @@ for servo in servos:
 
 while True:
     try:
-        if button.last_click_ms < 1000:
+        with open('face_detected.txt') as f:
+            face_detected = bool(f.read())
+        if face_detected:
             with open('data.txt') as f:
                 data = json.load(f)
                 out_dict = {int(k): v for k, v in data.items()}
@@ -53,6 +55,8 @@ while True:
                     servo.angle = 0
                     time.sleep(0.5)
                 time.sleep(0.5)
+            with open('face_detected.txt', 'w') as f:
+                f.write('')
             time.sleep(1)
     except KeyboardInterrupt:
         for servo in servos:
