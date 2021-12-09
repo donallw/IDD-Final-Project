@@ -60,7 +60,7 @@ for idx, day in enumerate(['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']):
     pill_b = tk.Entry(master)
     pill_b.grid(row=row, column=2)
     
-    in_dict[day] = [pill_a, pill_b]
+    in_dict[idx] = [pill_a, pill_b]
 
 # add buttons
 button_row = start_row_days + 8

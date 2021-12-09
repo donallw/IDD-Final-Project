@@ -3,7 +3,7 @@ import paho.mqtt.client as mqtt
 import uuid
 
 
-topic = 'IDD/coolteamfruit'
+topic = 'IDD/pilldispenser'
 
 #this is the callback that gets called once we connect to the broker. 
 #we should add our subscribe functions here as well
@@ -13,10 +13,12 @@ def on_connect(client, userdata, flags, rc):
 
 
 # this is the callback that gets called each time a message is recived
-def on_message(cleint, userdata, msg):
-	# print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
-    if msg.topic == 'IDD/coolteamfruit':
+def on_message(client, userdata, msg):
+    if msg.topic == topic:
         val = msg.payload.decode('UTF-8')
+        val = json.loads(val)
+        with open('data.txt', 'w') as outfile:
+            json.dump(val, outfile)
         
 
 # Every client needs a random ID

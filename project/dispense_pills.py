@@ -4,6 +4,7 @@ import busio
 import board
 from i2c_button import I2C_Button
 import json
+from datetime import datetime
 
 # BUTTON: initialize I2C
 i2c = busio.I2C(board.SCL, board.SDA)
@@ -35,13 +36,18 @@ for servo in servos:
 while True:
     try:
         if button.last_click_ms < 1000:
-            for idx, servo in enumerate(servos):
-                # Set the servo to 180 degree position
-                print(idx)
-                servo.angle = 180
-                time.sleep(0.5)
-                servo.angle = 0
-                time.sleep(0.5)
+            with open('data.txt') as f:
+                data = json.load(f)
+                out_dict = {int(k): v for k, v in data.items()}
+            print(out_dict)
+            curr_day = datetime.today().weekday()
+            # for idx, servo in enumerate(servos):
+            #     # Set the servo to 180 degree position
+            #     print(idx)
+            #     servo.angle = 180
+            #     time.sleep(0.5)
+            #     servo.angle = 0
+            #     time.sleep(0.5)
             time.sleep(1)
     except KeyboardInterrupt:
         for servo in servos:
