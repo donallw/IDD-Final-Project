@@ -3,6 +3,7 @@ from adafruit_servokit import ServoKit
 import busio
 import board
 from i2c_button import I2C_Button
+import json
 
 # BUTTON: initialize I2C
 i2c = busio.I2C(board.SCL, board.SDA)
