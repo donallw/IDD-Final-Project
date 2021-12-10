@@ -128,3 +128,32 @@ https://youtu.be/psr20-aDSgY
 ### Results
 
 The prototype was successful in delivering one pill at a time. You can pour pills into the funnel and the device delivers one pill at a time. The main issues were related to the gear rack/saw and mounting units properly. The gear rack was made of cardboard (see above) and the device needed a little help to be held together. However, the prototype showed that this design can be successful in delivering the pills. The next step was to craft it more carefully and re-structure it to make the device more robust. We aim to 3d prinnt the gears to make sure the device not fall apart when used as the cardboard tended to do.
+
+## 3D Printinng
+
+Having observed different designs with cardboard prototyping it was time to make a more robust prototype with 3D printing. We used the best design we had observecd so far and found a 3D model of a very similar design [online](https://www.thingiverse.com/thing:4673805). The design is based on a gear controlled by the servo which controlls the release of pills by movig a saw rack to fetch one pill at a time exactly like cradboard prototype 2 above.
+
+The device is made from 4 componets which are displayed below.
+
+###### Saw rack
+
+<img width="974" alt="image" src="https://user-images.githubusercontent.com/42963791/145484402-f3036b72-5896-49da-9827-9208011fe63d.png">
+
+###### Gear
+
+<img width="976" alt="image" src="https://user-images.githubusercontent.com/42963791/145484429-c51d60be-79ba-42ca-b36a-3b01f61c426b.png">
+
+##### Tunnel
+
+<img width="975" alt="image" src="https://user-images.githubusercontent.com/42963791/145484452-5f43c009-cce9-4d41-9a76-b653b7501b0b.png">
+
+##### Pill holder
+
+
+The pill releasig mechanism is demostrated below.
+
+## Involvig other components
+
+Having designed the pill releasig system the next step was to include user iteraction. The device will be controlled through a remote GUI that allows the user to selcet which pills he takes and on which days. The device will alsop be activated by face detection and the cotrolled through voice commands and gestures. The original plan was to use face recognition but aftersome experimentation and research online we realised the hardware we have was not capable of fully handling that task. It is possible to do some facial recognition with a raspberry pi but the accuaracy is not good and it does not handle changing backrounds for example, as it uses image recognition in most cases. A pill dispenser is a critical device (as explained in the comments above) and can not make errors, hence we do not want to risk errors by involving flaky facial recognition. However, we are happy with the new plan and feel that face detection followed by voice commands is a user friendly and safe method. The device will also have buttons far manual control because voice commands are not always suitable, e.g. in loud environments.
+
+
