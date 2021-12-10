@@ -18,7 +18,7 @@ if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE
 model = Model("model")
 # You can also specify the possible word list
 # rec = KaldiRecognizer(model, wf.getframerate(), "zero oh one two three four five six seven eight nine [unk]")
-rec = KaldiRecognizer(model, wf.getframerate(), '["oh one two three four five six seven eight nine zero", "[unk]"]')
+rec = KaldiRecognizer(model, wf.getframerate(), '["oh one two three four five six seven eight nine zero jack tom alex Bill", "[unk]"]')
 
 while True:
     data = wf.readframes(4000)
@@ -38,8 +38,10 @@ print(finalResult)
 jsonDict = json.loads(finalResult)
 textFound = jsonDict['text']
 print('text found: ',textFound)
-try:
-    f = open('zip_codes.txt', 'x')
-except FileExistsError:
-    f = open('zip_codes.txt', 'a')
-f.write(textFound + '\n')
+with open('found_name.txt', 'w') as f:
+   f.write(textFound) 
+#try:
+#    f = open('zip_codes.txt', 'x')
+#except FileExistsError:
+#    f = open('zip_codes.txt', 'a')
+#f.write(textFound + '\n')
