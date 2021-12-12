@@ -220,3 +220,16 @@ There is an opening on the right side to allow the microphone to detect voice in
 The video below shows how the PI can easily be removed and put back in.
 
 https://youtu.be/5RsL523H1Zk
+
+## Final Device Design
+
+We upgraded the exterior design of the device to make look more like a finished product. The ew design is displayed below.
+
+<img width="954" alt="image" src="https://user-images.githubusercontent.com/42963791/145732967-f7a0a6a5-0fa2-4b0c-bec1-8082be6f65ec.png">
+
+## Final Device Video
+
+The video below shows a runthough of the product. It demonstrates core features, such as pill release design, face detection, voice control and system control through a GUI.
+
+https://www.youtube.com/watch?v=FtSR2fHWl58
+
