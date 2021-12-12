@@ -7,21 +7,6 @@ import json
 from datetime import datetime
 import os
 
-# BUTTON: initialize I2C
-i2c = busio.I2C(board.SCL, board.SDA)
-
-# BUTTON: scan the I2C bus for devices
-while not i2c.try_lock():
-	pass
-devices = i2c.scan()
-i2c.unlock()
-default_addr = 0x6f
-if default_addr not in devices:
-	print('warning: no device at the default button address', default_addr)
-
-# BUTTON: initiatilize the button
-button = I2C_Button(i2c)
-
 # SERVO: Set channels to the number of servo channels on your kit.
 # There are 16 channels on the PCA9685 chip.
 kit = ServoKit(channels=16)
@@ -60,10 +45,10 @@ while True:
                         servo = servos[idx]
                         print('servo: ',idx,' num_turns:',num_turns)
                         for _ in range(num_turns):
-                            servo.angle = 180
+                            servo.angle = 90
                             time.sleep(0.5)
                             servo.angle = 0
-                            time.sleep(0.5)
+                            time.sleep(2)
                         time.sleep(0.5)
                     with open('face_detected.txt', 'w') as f:
                         f.write('')
