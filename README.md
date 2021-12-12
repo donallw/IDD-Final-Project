@@ -167,6 +167,8 @@ Having designed the pill releasig system the next step was to include user itera
 
 We implemented a graphical user interface usin tkinter where users can enter how many pills of each sort they need to take each day. The device then uses this information to detirmine how many pills of each kind to release each day. The GUI is demonstrated in the video below.
 
+https://youtu.be/1pQ9nhMme5U
+
 #### Face detection and voice control
 
 The device is contantly looking to detect faces. Once it detects a face it promts the user to say his name and then the device outputs the correct pills for that user for the given day. This is demonstrated in the videos below. In the first one the user says a name that is o file and gets his pills. In the second one, the user says a name that is not on file and does not get any pills.
@@ -215,4 +217,6 @@ There is an opening on the right side to allow the microphone to detect voice in
 
 <img width="969" alt="image" src="https://user-images.githubusercontent.com/42963791/145732558-91890cac-d13e-4478-a29a-64791da1ffa3.png">
 
+The video below shows how the PI can easily be removed and put back in.
 
+https://youtu.be/5RsL523H1Zk
