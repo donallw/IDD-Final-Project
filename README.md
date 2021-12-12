@@ -202,3 +202,17 @@ Next, we had to fit the pill dispensing uits into the device. We had to ensure t
 <img width="972" alt="image" src="https://user-images.githubusercontent.com/42963791/145732288-cbf39553-2265-4e95-a301-9eadc727d000.png">
 
 <img width="714" alt="image" src="https://user-images.githubusercontent.com/42963791/145732315-b90f6cb1-79a3-474a-8cfb-81b955da3d02.png">
+
+The final step was to place the PI in the box and close it off. We decided that we wanted the PI to be accessible so we did not want to close the device completely. Another design challege was that the microphone had to be on the outside of the box for the voice control to work properly. This was solved by having a lid on the backside of the device that could be opened to access the device. The microphone was then put in a small sidebox that was open in the frot to allow it to detect sound from thew outside. 
+
+The back can be opened to access PI
+
+<img width="965" alt="image" src="https://user-images.githubusercontent.com/42963791/145732527-cddc49c2-03c7-4c0b-b420-113517f7bf43.png">
+
+<img width="966" alt="image" src="https://user-images.githubusercontent.com/42963791/145732539-001e0dd6-e482-42b9-96f0-8d96ad9acacd.png">
+
+There is an opening on the right side to allow the microphone to detect voice input
+
+<img width="969" alt="image" src="https://user-images.githubusercontent.com/42963791/145732558-91890cac-d13e-4478-a29a-64791da1ffa3.png">
+
+
