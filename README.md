@@ -153,7 +153,7 @@ The device is made from 4 componets which are displayed below.
 
 The pill releasig mechanism is demostrated below.
 
-https://youtu.be/nwfXrcKMfSg
+https://youtu.be/-unlCLesPGM
 
 ### Results
 
@@ -161,6 +161,44 @@ As can be seen in the video, the 3D printed releasing mechanism was successful i
 
 ## Involvig other components
 
-Having designed the pill releasig system the next step was to include user iteraction. The device will be controlled through a remote GUI that allows the user to selcet which pills he takes and on which days. The device will alsop be activated by face detection and the cotrolled through voice commands and gestures. The original plan was to use face recognition but aftersome experimentation and research online we realised the hardware we have was not capable of fully handling that task. It is possible to do some facial recognition with a raspberry pi but the accuaracy is not good and it does not handle changing backrounds for example, as it uses image recognition in most cases. A pill dispenser is a critical device (as explained in the comments above) and can not make errors, hence we do not want to risk errors by involving flaky facial recognition. However, we are happy with the new plan and feel that face detection followed by voice commands is a user friendly and safe method. The device will also have buttons far manual control because voice commands are not always suitable, e.g. in loud environments.
+Having designed the pill releasig system the next step was to include user iteraction. The device will be controlled through a remote GUI that allows the user to selcet which pills he takes and on which days. The device will also be activated by face detection and the cotrolled through voice commands and gestures. The original plan was to use face recognition but aftersome experimentation and research online we realised the hardware we have was not capable of fully handling that task. It is possible to do some facial recognition with a raspberry pi but the accuaracy is not good and it does not handle changing backrounds for example, as it uses image recognition in most cases. We did some experiments from [these](https://www.pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/) instructions but the recognition was not accuarate enough. A pill dispenser is a critical device (as explained in the comments above) and can not make errors, hence we do not want to risk errors by involving flaky facial recognition. However, we are happy with the new plan and feel that face detection followed by voice commands is a user friendly and safe method. 
 
+#### Device Control and GUI
 
+We implemented a graphical user interface usin tkinter where users can enter how many pills of each sort they need to take each day. The device then uses this information to detirmine how many pills of each kind to release each day. The GUI is demonstrated in the video below.
+
+#### Face detection and voice control
+
+The device is contantly looking to detect faces. Once it detects a face it promts the user to say his name and then the device outputs the correct pills for that user for the given day. This is demonstrated in the videos below. In the first one the user says a name that is o file and gets his pills. In the second one, the user says a name that is not on file and does not get any pills.
+
+Name on file
+
+https://youtu.be/wwhEHTIEWZ4
+
+Name not on file
+
+https://youtu.be/8cJcsOLmWMg
+
+## Designing the device
+
+##### Contructiong the body of the device
+
+We used cardboard as the main component to construct the device. After measuring the size of all the internal components we created a box of suitable size that would fit them all. This process is displayed in the images below.
+
+<img width="551" alt="image" src="https://user-images.githubusercontent.com/42963791/145731926-94b825bb-d86d-4cee-9879-ea1e5a352d21.png">
+
+<img width="552" alt="image" src="https://user-images.githubusercontent.com/42963791/145731934-5593653c-e6e7-4e4a-b210-693a0557a650.png">
+
+The next step was to place all the components inside the device. We started with the camera. The camera we have is a little bulky and we wanted to hide it from the end user. We placed it inside the box and cut a hole in it so the lens was only visible from the outside.
+
+<img width="543" alt="image" src="https://user-images.githubusercontent.com/42963791/145732059-ba9718f4-8a67-42a2-84ef-1ab3be71369d.png">
+
+<img width="538" alt="image" src="https://user-images.githubusercontent.com/42963791/145732064-8325776e-b4e2-4f85-b0de-59dddd89c39b.png">
+
+Next, we had to fit the pill dispensing uits into the device. We had to ensure that the servo and the gear system were properly mounted to make sure they would function properly. We mounted the servo to the bottom of the box and cut precisely measured where to cut holes in the bow for the pill dispensing unit to align them with the servo. Each dispensing unit required two holes, one to insert pills and oe to release pills. The servo then spins the gear which moves the saw rack back and forth. This design is displayed below.
+
+<img width="732" alt="image" src="https://user-images.githubusercontent.com/42963791/145732302-8a00a01e-989f-49db-8f6c-c88d0e8c8d68.png">
+
+<img width="972" alt="image" src="https://user-images.githubusercontent.com/42963791/145732288-cbf39553-2265-4e95-a301-9eadc727d000.png">
+
+<img width="714" alt="image" src="https://user-images.githubusercontent.com/42963791/145732315-b90f6cb1-79a3-474a-8cfb-81b955da3d02.png">
