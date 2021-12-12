@@ -149,8 +149,15 @@ The device is made from 4 componets which are displayed below.
 
 ##### Pill holder
 
+<img width="971" alt="image" src="https://user-images.githubusercontent.com/42963791/145731008-6564acdb-d41b-44ee-abbd-b1015b33b5bd.png">
 
 The pill releasig mechanism is demostrated below.
+
+https://youtu.be/nwfXrcKMfSg
+
+### Results
+
+As can be seen in the video, the 3D printed releasing mechanism was successful in delivering multiple pills. Having developed the mechanism for releasing pills we had to design the device itself and how users would interact with it. These steps are discussed below. (In the video above we have already created the box ind interaction that are described below.)
 
 ## Involvig other components
 
