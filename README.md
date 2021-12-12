@@ -64,9 +64,9 @@ We were very grateful for the feedback we received, it was thorough and detailed
 
 - We will follow Alexandra's suggestion and not do any 3D printing unless we have properly tested it with cardboard first.
 
-- Both Alexandra and Bella discussed security issues of the product. We had listed this as a risk earlier as well and it was helpful to get a confirmation from users that this was a big concern. We acknowledge that the face-recognitionn can someties produce errors ad hence we like the idea of some confirmation feature. We are planning to implement a voice confirmation feature so that the device doesn't release ay pills unless the user confirms it is him via voice input. We also like the weight scale idea to make sure that the correct pills were released. When reading the feedback we also had the idea of solving that problem in a similar manner as we did in Lab 5 where we use object detection to check if the right amount of pills were released.
+- Both Alexandra and Bella discussed security issues of the product. We had listed this as a risk earlier as well and it was helpful to get a confirmation from users that this was a big concern. We acknowledge that the face-recognitionn can someties produce errors ad hence we like the idea of some confirmation feature. We are planning to implement a voice confirmation feature so that the device doesn't release any pills unless the user confirms it is them via voice input. We also like the weight scale idea to make sure that the correct pills were released. When reading the feedback we also had the idea of solving that problem in a similar manner as we did in Lab 5 where we use object detection to check if the right amount of pills were released.
 
-Overall, we appreciate the feedback we got and have creatred the following action items for our product:
+Overall, we appreciate the feedback we got and have created the following action items for our product:
 
 - Include a GUI to interact with the settings of the device
 
@@ -86,7 +86,7 @@ We decided that we needed to design the pill release mechanism first, before we 
 
 <img width="552" alt="image" src="https://user-images.githubusercontent.com/42963791/145081560-8a7764e1-8dd7-40b9-9ef2-1fc6730d461a.png">
 
-After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turstile mechanism to deliver the pills. The prototype is demonstrated in the video below.
+After considering all design methods discussed above we selected the 2nd prototype design to observe further. We created a cardboard prototype that uses a turnstile mechanism to deliver the pills. The prototype is demonstrated in the video below.
 
 https://youtu.be/GEepd2mpEjM
 
@@ -103,7 +103,7 @@ https://youtu.be/7yktiRSzXLk
 
 ### Results
 
-The turnstile performed well in delivering the pills but the prototype had severe limitations. It can only hold one pill in each tunel at a time, if more pills are put in the pipes, there is no mechanism to control how many are released. Someties a few go through and other times they get stuck and no pills go through. This was our next design challenge.
+The turnstile performed well in delivering the pills but the prototype had severe limitations. It can only hold one pill in each tunnel at a time, if more pills are put in the pipes, there is no mechanism to control how many are released. Someties a few go through and other times they get stuck and no pills go through. This was our next design challenge.
 
 ### Desig 2 - Gear system
 
@@ -131,9 +131,9 @@ The prototype was successful in delivering one pill at a time. You can pour pill
 
 ## 3D Printinng
 
-Having observed different designs with cardboard prototyping it was time to make a more robust prototype with 3D printing. We used the best design we had observecd so far and found a 3D model of a very similar design [online](https://www.thingiverse.com/thing:4673805). The design is based on a gear controlled by the servo which controlls the release of pills by movig a saw rack to fetch one pill at a time exactly like cradboard prototype 2 above.
+Having observed different designs with cardboard prototyping it was time to make a more robust prototype with 3D printing. We used the best design we had observecd so far and found a 3D model of a very similar design [online](https://www.thingiverse.com/thing:4673805). The design is based on a gear controlled by the servo which controlls the release of pills by movig a saw rack to fetch one pill at a time exactly like cardboard prototype 2 above.
 
-The device is made from 4 componets which are displayed below.
+The device is made from 4 components which are displayed below.
 
 ###### Saw rack
 
@@ -151,7 +151,7 @@ The device is made from 4 componets which are displayed below.
 
 <img width="971" alt="image" src="https://user-images.githubusercontent.com/42963791/145731008-6564acdb-d41b-44ee-abbd-b1015b33b5bd.png">
 
-The pill releasig mechanism is demostrated below.
+The pill releasing mechanism is demonstrated below.
 
 https://youtu.be/-unlCLesPGM
 
@@ -161,17 +161,17 @@ As can be seen in the video, the 3D printed releasing mechanism was successful i
 
 ## Involvig other components
 
-Having designed the pill releasig system the next step was to include user iteraction. The device will be controlled through a remote GUI that allows the user to selcet which pills he takes and on which days. The device will also be activated by face detection and the cotrolled through voice commands and gestures. The original plan was to use face recognition but aftersome experimentation and research online we realised the hardware we have was not capable of fully handling that task. It is possible to do some facial recognition with a raspberry pi but the accuaracy is not good and it does not handle changing backrounds for example, as it uses image recognition in most cases. We did some experiments from [these](https://www.pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/) instructions but the recognition was not accuarate enough. A pill dispenser is a critical device (as explained in the comments above) and can not make errors, hence we do not want to risk errors by involving flaky facial recognition. However, we are happy with the new plan and feel that face detection followed by voice commands is a user friendly and safe method. 
+Having designed the pill releasing system the next step was to include user iteraction. The device will be controlled through a remote GUI that allows the user to select which pills they take and on which days. The device will also be activated by face detection and then controlled through voice commands and gestures. The original plan was to use face recognition but after some experimentation and research online we realized the hardware we have was not capable of fully handling that task. It is possible to do some facial recognition with a raspberry pi but the accuaracy is not good and it does not handle changing backrounds for example, as it uses image recognition in most cases. We did some experiments from [these](https://www.pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/) instructions but the recognition was not accuarate enough. A pill dispenser is a critical device (as explained in the comments above) and can not make errors, hence we do not want to risk errors by involving flaky facial recognition. However, we are happy with the new plan and feel that face detection followed by voice commands is a user friendly and safe method. 
 
 #### Device Control and GUI
 
-We implemented a graphical user interface usin tkinter where users can enter how many pills of each sort they need to take each day. The device then uses this information to detirmine how many pills of each kind to release each day. The GUI is demonstrated in the video below.
+We implemented a graphical user interface using [tkinter](https://docs.python.org/3/library/tkinter.html) where users can enter how many pills of each type they need to take each day. The device then uses this information to detirmine how many pills of each kind to release each day. The GUI is demonstrated in the video below.
 
 https://youtu.be/1pQ9nhMme5U
 
 #### Face detection and voice control
 
-The device is contantly looking to detect faces. Once it detects a face it promts the user to say his name and then the device outputs the correct pills for that user for the given day. This is demonstrated in the videos below. In the first one the user says a name that is o file and gets his pills. In the second one, the user says a name that is not on file and does not get any pills.
+The device is contantly looking to detect faces. Once it detects a face it prompts the user to say his name and then the device outputs the correct pills for that user for the given day. This is demonstrated in the videos below. In the first one the user says a name that is on file and gets his pills. In the second one, the user says a name that is not on file and does not get any pills.
 
 Name on file
 
@@ -205,7 +205,7 @@ Next, we had to fit the pill dispensing uits into the device. We had to ensure t
 
 <img width="714" alt="image" src="https://user-images.githubusercontent.com/42963791/145732315-b90f6cb1-79a3-474a-8cfb-81b955da3d02.png">
 
-The final step was to place the PI in the box and close it off. We decided that we wanted the PI to be accessible so we did not want to close the device completely. Another design challege was that the microphone had to be on the outside of the box for the voice control to work properly. This was solved by having a lid on the backside of the device that could be opened to access the device. The microphone was then put in a small sidebox that was open in the frot to allow it to detect sound from thew outside. 
+The final step was to place the PI in the box and close it off. We decided that we wanted the PI to be accessible so we did not want to close the device completely. Another design challege was that the microphone had to be on the outside of the box for the voice control to work properly. This was solved by having a lid on the backside of the device that could be opened to access the device. The microphone was then put in a small sidebox that was open in the frot to allow it to detect sound from the outside. 
 
 The back can be opened to access PI
 
@@ -223,7 +223,7 @@ https://youtu.be/5RsL523H1Zk
 
 ## Final Device Design
 
-We upgraded the exterior design of the device to make look more like a finished product. The ew design is displayed below.
+We upgraded the exterior design of the device to make look more like a finished product. The new design is displayed below.
 
 <img width="954" alt="image" src="https://user-images.githubusercontent.com/42963791/145732967-f7a0a6a5-0fa2-4b0c-bec1-8082be6f65ec.png">
 
