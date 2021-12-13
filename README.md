@@ -181,6 +181,31 @@ Name not on file
 
 https://youtu.be/8cJcsOLmWMg
 
+## Technical Execution
+On the software side, there was a number of things we had to get working. There are four scripts in total:
+
+`set_pills.py`
+
+This script is ran on a local computer. It brings up a GUI created with `tkinter`, python's standard GUI library. This GUI is shown below. It also uses the `MQTT` libary in order to communicate the raspberry pi. There are two buttons on the GUI. The `Save` button calls the `save` function when pressed. This takes all the values stored in the fields Mon-Sun for Pill A and Pill B, and stores it in a dictionary. While doing so, it converts the string number values to integers and blank entries to zeros, uses the `json` library to conver this dictionary to a string, and then sends it over MQTT on our topic `IDD.pilldispenser` to the raspberry pi, which is scanning for messages on that topic with the script `get_pills.py`. In our dictionary representation, we have Mon as zero and Sun as 6. These are the keys to the dictionary, while the values are a length 2 list with the amount of pills to take for each erspective pill silo. The GUI throws an error if you ty to save anything but integers or blank values. The other button is `Clear` which calls the `clear` function, and simply clears all the values from all the fields, as expected. This aids in ease of use. 
+
+![Screenshot 2021-12-13 172622](https://user-images.githubusercontent.com/52221419/145898854-2610b052-233c-4d5e-ada0-764e0b634660.png)
+
+
+`get_pills.py`
+
+This script would be ran on the raspberry pi. It would connect to the MQTT server and scan for messages under our topic, `IDD/pilldispenser`. This topic would only receive data in the form of JSON dictionaries. Once it received a mesage, it would be loaded into a python dictionary and then written back into a JSON string dictionary in a text file called `data.txt`. This will be used later to speak with the pill dispensing script `dispense_pills.py` to describe which pills to take on which day. 
+
+`face-detection/face-detection.py`
+
+This was a modified form of the original openCV facial detection script. It worked rather simply, once the list of faces that the camera had deteted was greater than 0, the script would write to a text file, `face_detected.txt`, that there was a face detected. Then, it would wait 10 seconds before scanning for faces again. Otherwise, this text file was empty, so when read it could be interpreted as `False` in boolean terms. 
+
+`dispense_pills.py`
+
+This is the script that did most of the heavy lifting. It would scan for the face detected marker placed by the facial detection script - `face_detected.txt`. If it was empty, nothing would happen. If it had text in it (I used the work "True" for simplicity sake, it would then follow up with an auditory voice recognition test. It would ask the user to say their name. This would work by calling a shell script (`verbal_asking_script.sh`), using the Google voice API to speak to us, and then using `vosk` to decipher to recored language into string text. This was stored in a text file, `found_name.txt`. The deciphering of the recorded script and saving to the text file was done in the script `test_words.py`. Then, this saved name would be compared to the name on file, which for us was `jack`. If the string matched, then the script would proceed with pill dispensing. If it did not, the device would speak to us (again with the Google API) and notify us that the name was incorrect - with the shell script `incorrect_name.sh`. After that, it would clear `face_detected.txt` in order to force a rescan of the face. 
+
+Otherwise, if the name was correct and indeed matched `jack`, then the device would dispense the pills. It did this by loading the most recently uploaded pill data from `get_pills.py`, which is formatted as a JSON and located in a text file called `data.txt`, and store this in a dictionary. Next, the script would find the current day through the `datetime` module and pull the index from the dictionary to return a list of two elements: the number of pills required from each pill silo that day. The script would then iterate through the servos and move the servo according to the number of pills required for that servo's pill silo per day. After this was all done, it would set the facial detection to `False` in `face-detected.txt` in order to prepare for the next time. 
+
+
 ## Designing the device
 
 ##### Contructiong the body of the device
